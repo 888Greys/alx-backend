@@ -33,7 +33,7 @@ class BasicCache(BaseCaching):
         """ Get value of key from cache data.
 
         args:
-            key: key to retrieve from cache data
+            keys: key to retrieve from cache data
         """
 
         if key is None or key not in self.cache_data.keys():
