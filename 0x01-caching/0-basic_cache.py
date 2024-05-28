@@ -2,40 +2,38 @@
 """ 0-basic_cache.py """
 
 
-# from base_caching import BaseCaching
+from base_caching import BaseCaching
 
 BaseCaching = __import__('base_caching').BaseCaching
 
+
 class BasicCache(BaseCaching):
-    """ BasicCache defines:
-      - caching system
+    """_summary_
     """
 
     def __init__(self):
-        """ Initiliaze
+        """_summary_
         """
         super().__init__()
 
     def put(self, key, item):
-        """ Add key/value pair to cache data.
+        """_summary_
 
-        args:
-            key: key for item
-            item: value to add to cache
+        Args:
+                key (_type_): _description_
+                item (_type_): _description_
         """
-
         if key is None or item is None:
             pass
         else:
             self.cache_data[key] = item
 
     def get(self, key):
-        """ Get value of key from cache data.
+        """return the value in self.cache_data linked to key
 
-        args:
-            keys: key to retrieve from cache data
+        Args:
+                key (_type_): _description_
         """
-
         if key is None or key not in self.cache_data.keys():
             return None
         return self.cache_data.get(key)
